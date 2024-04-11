@@ -5,18 +5,15 @@
 
 using namespace std;
 
-
-
-
 int main()
 {
-#pragma region ê±°í’ˆ ì •ë ¬ (Bubble Sort)
-	// ì„œë¡œ ì¸ì ‘í•œ ë‘ ì›ì†Œë¥¼ ê²€ì‚¬í•˜ì—¬ ì •ë ¬í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜ ì…ë‹ˆë‹¤.
+#pragma region °ÅÇ° Á¤·Ä (Bubble Sort)
+	// ¼­·Î ÀÎÁ¢ÇÑ µÎ ¿ø¼Ò¸¦ °Ë»çÇÏ¿© Á¤·ÄÇÏ´Â ¾Ë°í¸®Áò ÀÔ´Ï´Ù.
 
-	// ê±°í’ˆ ì •ë ¬ì˜ ì‹œê°„ ë³µì¡ë„ëŠ” O(n^2)ì…ë‹ˆë‹¤.
+	// °ÅÇ° Á¤·ÄÀÇ ½Ã°£ º¹Àâµµ´Â O(n^2)ÀÔ´Ï´Ù.
 
-	// 1íšŒì „ -> në²ˆ ë§Œí¼ ë°˜ë³µ
-	// 2íšŒì „ -> n-1ë²ˆ ë§Œí¼ ë°˜ë³µ 
+	// 1È¸Àü -> n¹ø ¸¸Å­ ¹İº¹
+	// 2È¸Àü -> n-1¹ø ¸¸Å­ ¹İº¹ 
 	// int count = 0;
 	// int arr[SIZE] = { 1, 7, 3, 9, 2 };
 	// 
@@ -32,8 +29,8 @@ int main()
 	// 	}
 	// 	count++;
 	// 	
-	// 	cout << count << "íšŒì „" <<  endl;
-	// 	cout << "ê²°ê³¼ ê°’ : ";
+	// 	cout << count << "È¸Àü" <<  endl;
+	// 	cout << "°á°ú °ª : ";
 	// 	for (int i = 0; i < 5; i++)
 	// 	{
 	// 		cout << arr[i] << " ";
@@ -41,11 +38,11 @@ int main()
 	// 	cout << endl;
 	// }
 #pragma endregion
-#pragma region ì„ íƒ ì •ë ¬(Selection Sort)
-	// ì£¼ì–´ì§„ ë¦¬ìŠ¤íŠ¸ ì¤‘ì— ìµœì†Œê°’ì„ ì°¾ì•„ì„œ ë§¨ ì•ì— ìœ„ì¹˜í•œ ê°’ê³¼
-	// êµì²´í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ì •ë ¬í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜ì…ë‹ˆë‹¤.
-	
-	// ì„ íƒ ì •ë ¬ì˜ ì‹œê°„ ë³µì¡ë„ëŠ” O(n^2)ì…ë‹ˆë‹¤.
+#pragma region ¼±ÅÃ Á¤·Ä(Selection Sort)
+	// ÁÖ¾îÁø ¸®½ºÆ® Áß¿¡ ÃÖ¼Ò°ªÀ» Ã£¾Æ¼­ ¸Ç ¾Õ¿¡ À§Ä¡ÇÑ °ª°ú
+	// ±³Ã¼ÇÏ´Â ¹æ½ÄÀ¸·Î Á¤·ÄÇÏ´Â ¾Ë°í¸®ÁòÀÔ´Ï´Ù.
+
+	// ¼±ÅÃ Á¤·ÄÀÇ ½Ã°£ º¹Àâµµ´Â O(n^2)ÀÔ´Ï´Ù.
 	//	int count = 1;
 	//	int min, minIndex = 0;
 	//	int arr[SIZE] = { 2, 11, 21, 7, 1 };
@@ -68,8 +65,8 @@ int main()
 	//		}
 	//		std::swap(arr[i], arr[minIndex]);
 	//		
-	//		cout << count << "íšŒì „" << endl;
-	//		cout << "ê²°ê³¼ ê°’ : ";
+	//		cout << count << "È¸Àü" << endl;
+	//		cout << "°á°ú °ª : ";
 	//		for (const int&element: arr)
 	//		{
 	//			cout << element << " ";
@@ -77,39 +74,35 @@ int main()
 	//		cout << endl;
 	//		count++;
 	//	}
-	
+
 #pragma endregion
-#pragma region ì‚½ì… ì •ë ¬ (Insert Sort)
-	// dataë¥¼ í•˜ë‚˜ì”© í™•ì¸í•˜ë©´ì„œ ì´ë¯¸ ì •ë ¬ëœ ë¶€ë¶„ê³¼ ë¹„êµí•˜ì—¬
-	// ìì‹ ì˜ ìœ„ì¹˜ë¥¼ ì°¾ì•„ ì‚½ì…í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ì •ë ¬í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜ ì…ë‹ˆë‹¤.
-	// ì‹œê°„ ë³µì¡ë„ëŠ” O(n^2) ì…ë‹ˆë‹¤.
+#pragma region »ğÀÔ Á¤·Ä (Insert Sort)
+	// data¸¦ ÇÏ³ª¾¿ È®ÀÎÇÏ¸é¼­ ÀÌ¹Ì Á¤·ÄµÈ ºÎºĞ°ú ºñ±³ÇÏ¿©
+	// ÀÚ½ÅÀÇ À§Ä¡¸¦ Ã£¾Æ »ğÀÔÇÏ´Â ¹æ½ÄÀ¸·Î Á¤·ÄÇÏ´Â ¾Ë°í¸®Áò ÀÔ´Ï´Ù.
+	// ½Ã°£ º¹Àâµµ´Â O(n^2) ÀÔ´Ï´Ù.
 	int key = 0;
 	int count = 1;
 	int j = 0;
 
-	int arr[SIZE] = {9, 6, 8, 1, 3};
+	int arr[SIZE] = { 9, 6, 8, 1, 3 };
 
-	for (int i = 1; i < SIZE ; i++)
+	for (int i = 1; i < SIZE; i++)
 	{
 		key = arr[i];
 		for (j = i - 1; j >= 0 && arr[j] > key; j--)
 		{
-			arr[j+1] = arr[j];
+			arr[j + 1] = arr[j];
 		}
 		arr[j + 1] = key;
-		cout << "íšŒì „ ìˆ˜ : " << count << endl;
-		cout << "ê²°ê³¼ ê°’ : ";
-		for (const int & element : arr)
+		cout << "È¸Àü ¼ö : " << count << endl;
+		cout << "°á°ú °ª : ";
+		for (const int& element : arr)
 		{
 			cout << element << " ";
 		}
 		cout << endl;
 		count++;
 	}
-
-	
-	
 #pragma endregion
-	
+	return 0;
 }
-

@@ -6,16 +6,16 @@ using namespace std;
 
 int main()
 {
-#pragma region ê³„ìˆ˜ ì •ë ¬
-	// ë°ì´í„°ì˜ ê°’ì„ ì§ì ‘ ë¹„êµí•˜ì§€ ì•Šê³ , ë‹¨ìˆœí•˜ê²Œ
-	// ê° ìˆ«ìê°€ ëª‡ ê°œ ìˆëŠ”ì§€ ê°œìˆ˜ë¥¼ ì„¸ì–´ ì €ì¥í•œ ë‹¤ìŒ
-	// ì •ë ¬í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜ ì…ë‹ˆë‹¤.
-	
+#pragma region °è¼ö Á¤·Ä
+	// µ¥ÀÌÅÍÀÇ °ªÀ» Á÷Á¢ ºñ±³ÇÏÁö ¾Ê°í, ´Ü¼øÇÏ°Ô
+	// °¢ ¼ıÀÚ°¡ ¸î °³ ÀÖ´ÂÁö °³¼ö¸¦ ¼¼¾î ÀúÀåÇÑ ´ÙÀ½
+	// Á¤·ÄÇÏ´Â ¾Ë°í¸®Áò ÀÔ´Ï´Ù.
+
 	//	int arr[] = {1,2,3,4,1,1,5};
 	//	int countList[SIZE] = {0,};
 	//	int count = 0;
 	//	int size = sizeof(arr) / sizeof(arr[0]);
-//	
+	// 
 	//	for (int i = 1; i <= size; i++)
 	//	{
 	//		count = 0;
@@ -27,25 +27,25 @@ int main()
 	//			}
 	//			countList[i-1] = count;
 	//		}
-	//		cout << i << "ì˜ ê°œìˆ˜ : " << count << endl;
+	//		cout << i << "ÀÇ °³¼ö : " << count << endl;
 	//	}
 	//	
-	//	cout << "ê²°ê³¼ ê°’ : ";
+	//	cout << "°á°ú °ª : ";
 	//	for (const int & element : countList)
 	//	{
 	//		cout << element << " ";
 	//	}
 	//	cout << endl;
 #pragma endregion
-#pragma region ë¬¸ìì—´ ë’¤ì§‘ê¸°
+#pragma region ¹®ÀÚ¿­ µÚÁı±â
 	//  string content = "Yellow";
-//  
+	//  
 	//  for (int i = 0; i <= content.length()/2; i++)
 	//  {
 	//  	std::swap(content[i],content[SIZE -i -1]);
 	//  }
 	//  
-	//  cout << "ê²°ê³¼ ê°’: ";
+	//  cout << "°á°ú °ª: ";
 	//  for (int i = 0; i < SIZE; i++)
 	//  {
 	//  	cout << content[i] << " ";
