@@ -68,6 +68,5 @@ int main()
 	//	cout << "최소공배수 : " << count * a * b << endl;
 #pragma endregion
 
-
 	return 0;
 }
