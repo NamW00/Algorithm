@@ -1,105 +1,76 @@
 ﻿#include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
-class Graph
-{
-private:
-	class Edge
-	{
-	private:
-		int x;
-		int y;
-		int distance;
-	public:
-		Edge(int x, int y, int distance)
-		{
-			this->x = x;
-			this->y = y;
-			this->distance = distance;
-		}
 
-		bool operator < (const Edge & edge)
-		{
-			return this->distance < edge.distance;
-		}
-	};
 
-	std::vector <Edge> edgeList;
-	
-public:
-	Graph()
-	{
-
-	}
-
-	void CreateEdge(int x, int y, int distance)
-	{
-		edgeList.push_back(Edge(x,y,distance));
-	}
-
-	void Show()
-	{
-
-	}
-
-	void Sort()
-	{
-		sort(edgeList.begin(), edgeList.end());
-	}
-};
 
 int main()
 {
-#pragma region 신장 트리(Spanning Tree)
-	// 그래프의 모든 정점을 포함하면서 사이클이 존재하지 않는 부분 그래프
-	// 그래프의 모든 정점을 최소 비용으로 연결하는 트리
-	// 그래프의 정점의 수가 n개일 때, 간선의 수는 n-1개인 트리입니다.
+#pragma region 탐욕법 (Greedy)
+	// 최적의 해를 구하는데에 사용되는 근사적인
+	// 방법으로, 여러 경우 중 하나를 결정해야 할 때마다
+	// 그 순간에 최적이라고 생각되는 것을 선택해 나가는
+	// 방식으로 진행하여 최종적인 해답을 구하는 알고리즘입니다.
 
-	// 최소 비용 신장트리 (Minimum Spanning Tree, MST)
-	//	: 그래프의 간선들이 가중치 합의 최소인 신장 트리
+	// 1. 탐욕 선택 속성
+	// 각 단계에서 '최선의 선택'을 했을 때 전체 문제에 대한
+	// 최적의 해를 구할 수 있는 경우입니다.
 
-	//		 (1)
-	//	  1/      \ 3
-	//	 (2)-2-(4)-5-(5)
-	//	  6 \     / 4
-	//		  (3)
+	// 2. 최적 부분 구조
+	// 전체 문제의 최적의 해가 '부분 문제의 최적의 해로 구성'될
+	// 수 있는 경우입니다.
 
-	// 모든 노드에 간선이 서로 연결되어 있으면 Cycle
-	// 			..				있지 않으면 NoCycle
+	// Greedy Algorithm의 단계
 
+	// 1. 문제의 최적해 구조를 결정합니다.
+
+	// 2. 문제의 구조에 맞게 선택 절차를 정의합니다.
+
+	// 3. 선택 절차에 따라 선택을 수행합니다.
+
+	// 4. 선택된 해가 문제의 조건을 만족하는지 검사합니다.
+
+	// 5. 조건을 만족하지 않으면 해당 해를 제외합니다.
+
+	// 6. 모든 선택이 완료되면 해답을 검사합니다.
+
+	// 7. 조건을 만족하지 않으면 해답으로 인정되지 않습니다.
+
+	int rest = 1230;
+	int count = 0;
+
+	if ((rest/500) != 0)
+	{
+		count += (rest / 500); 
+		rest -= (count * 500);
+	}
+	if ((rest/100) != 0)
+	{
+		count += (rest / 100); 
+		rest -= (count * 100);
+	}
+	if ((rest/50) != 0)
+	{
+		count += (rest / 50); 
+		rest -= (count * 50);
+	}
+	if ((rest/10) != 0)
+	{
+		count += (rest / 10); 
+		rest -= (count * 10);
+	}
 	
-#pragma endregion
-
-#pragma region 크루스칼 알고리즘
-	Graph graph;
-
-	graph.CreateEdge(1, 2, 67);
-	graph.CreateEdge(1, 4, 28);
-	graph.CreateEdge(1, 5, 15);
-	graph.CreateEdge(1, 7, 12);
-
-	graph.CreateEdge(2, 4, 60);
-	graph.CreateEdge(2, 5, 60);
-
-	graph.CreateEdge(3, 5, 22);
-	graph.CreateEdge(3, 6, 33);
-
-	graph.CreateEdge(4, 7, 13);
-
-	graph.CreateEdge(5, 6, 42);
-	graph.CreateEdge(5, 7, 73);
 	
-	// Sort 함수 : #include <algorithm>을 선언해야한다.
-	graph.Sort();
-#pragma endregion
+	cout << "최적의 동전 개수 : " << count << endl;
+	cout << "나머지 거스름돈 값 : " << rest << endl;
 
-#pragma region 추가 학습 내용
-	// 크루스칼, 프림 트리
-#pragma endregion
 
+
+
+
+
+
+#pragma endregion
 
 	return 0;
 }
-

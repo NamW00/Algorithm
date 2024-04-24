@@ -1,14 +1,14 @@
-	//	include <iostream>
+	//	#include <iostream>
 
-	//	sing namespace std;
+	//	using namespace std;
 
-	//	define SIZE 8
+	//	#define SIZE 8
 
-	//	lass Graph
+	//	class Graph
 	//	
-	//	rivate:
+	//	private:
 	//		int parent[SIZE];
-	//	ublic:
+	//	public:
 	//		Graph()
 	//		{
 	//			for (int i = 1; i < SIZE; i++)
