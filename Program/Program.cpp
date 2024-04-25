@@ -36,39 +36,52 @@ int main()
 
 	// 7. 조건을 만족하지 않으면 해답으로 인정되지 않습니다.
 
-	int rest = 1230;
+	int rest = 0;
+	int count_500 = 0;
+	int count_100 = 0;
+	int count_50 = 0;
+	int count_10 = 0;
 	int count = 0;
 
-	if ((rest/500) != 0)
+	cout << "보유금액을 입력하시오 : ";
+	cin >> rest;
+	cout << endl;
+
+	while ((rest/10) != 0)
 	{
-		count += (rest / 500); 
-		rest -= (count * 500);
-	}
-	if ((rest/100) != 0)
-	{
-		count += (rest / 100); 
-		rest -= (count * 100);
-	}
-	if ((rest/50) != 0)
-	{
-		count += (rest / 50); 
-		rest -= (count * 50);
-	}
-	if ((rest/10) != 0)
-	{
-		count += (rest / 10); 
-		rest -= (count * 10);
+		if (rest >= 500)
+		{
+			rest -= 500;
+			count_500++;
+			count++;
+		}
+		else if (rest >= 100)
+		{
+			rest -= 100;
+			count_100++;
+			count++;
+
+		}
+		else if (rest >= 50)
+		{	
+			rest -= 50;
+			count_50++;
+			count++;
+		}
+		else if (rest >= 10)
+		{
+			rest -= 10;
+			count_10++;
+			count++;
+		}
 	}
 	
-	
-	cout << "최적의 동전 개수 : " << count << endl;
 	cout << "나머지 거스름돈 값 : " << rest << endl;
-
-
-
-
-
-
+	cout << "최적의 동전 개수 : " << count << endl;
+	cout << "500원 : " << count_500 << endl;
+	cout << "100원 : " << count_100 << endl;
+	cout << "50원 : " << count_50 << endl;
+	cout << "10원 : " << count_10 << endl;
 
 #pragma endregion
 
