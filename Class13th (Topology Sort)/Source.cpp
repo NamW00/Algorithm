@@ -44,6 +44,7 @@ public:
         {
             if (queue.empty())
             {
+                cout << "Cycle 발생" << endl;
                 break;
             }
 
